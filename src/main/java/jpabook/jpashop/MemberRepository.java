@@ -18,6 +18,8 @@ public class MemberRepository {
     }
 
     public Member find(Long id){
+        System.out.println("111222");
+
         return em.find(Member.class, id);
     }
 
