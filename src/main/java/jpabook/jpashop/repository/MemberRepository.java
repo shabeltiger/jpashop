@@ -1,17 +1,20 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+   // @PersistenceContext
+   // private EntityManager em;
+    //원래 영속성 매니저는 PersistenceContext가 있어야 한다. 스프링부트가 Autowired도 인젝션 되게 해준다.
+    private final EntityManager em;
 
     public void save(Member member){
         em.persist(member);
