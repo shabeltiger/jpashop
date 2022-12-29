@@ -14,6 +14,8 @@ public class JpashopApplication {
 		System.out.println("웅에:"+test);
 
 		SpringApplication.run(JpashopApplication.class, args);
+
+
 	}
 
 }
