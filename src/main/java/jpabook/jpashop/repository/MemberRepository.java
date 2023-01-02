@@ -29,9 +29,10 @@ public class MemberRepository {
     }
 
     public List<Member> findByName(String name){
+        System.out.println("왜 깃에서 안나옴????");
         return em.createQuery("select m from Member m where m.name= :name", Member.class)
                 .setParameter("name",name)
-                .getResultList();
+                .getResultList();        
     }
 
 }
