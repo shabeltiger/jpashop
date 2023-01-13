@@ -11,7 +11,6 @@ public class JpashopApplication {
 		hello.setData("hello");
 
 		String test = hello.getData();
-		System.out.println("웅에2222:"+test);
 
 		SpringApplication.run(JpashopApplication.class, args);
 
